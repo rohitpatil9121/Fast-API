@@ -1,0 +1,43 @@
+#fastapi
+
+#what is get request?
+
+GET is the most common HTTP method. It retrieves data from a server and is the default method used when you type a URL into your browser.
+
+Key characteristics:
+- Safe: Should not change server state (idempotent)
+- Cacheable: Responses can be cached
+- Idempotent: Multiple identical requests should have the same effect
+- Used for: Fetching data, retrieving resources
+
+what is post request?
+
+POST is an HTTP method that sends data to a server to create or update a resource. Unlike GET, which only retrieves data, POST is used to submit data to be processed by the server.
+
+Key characteristics:
+- Not safe: Can change server state
+- Not idempotent: Multiple identical requests may create multiple resources
+- Used for: Creating new resources, submitting forms, uploading files
+- Data in request body: Unlike GET, POST sends data in the request body
+
+what is put request?
+
+PUT is an HTTP method that updates or replaces an entire resource on the server. It's similar to POST but is typically used for updating existing resources when you have the complete data.
+
+Key characteristics:
+- Idempotent: Multiple identical PUT requests should have the same effect as one
+- Used for: Updating existing resources completely
+- Data in request body: Sends the complete updated resource
+- Typically requires resource identifier: Usually includes the resource ID in the URL
+
+what is delete request?
+
+DELETE is an HTTP method that removes a resource from the server. It's used to delete data and is typically idempotent, meaning multiple identical DELETE requests should have the same effect.
+
+Key characteristics:
+- Idempotent: Multiple identical DELETE requests should have the same effect as one
+- Used for: Removing resources
+- Typically includes resource identifier: Usually includes the resource ID in the URL
+- Can return different status codes: 200 (success), 204 (no content), 404 (not found), etc.
+
+
